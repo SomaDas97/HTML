@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script>
+        function loadAboutInformation(){
+            //call to ajax:
+            //about.html
+            var request = new XMLHttpRequest()
+            request.open("GET" , "about.html");
+             request.onload= function(){
+                // call whenever statechange
+                //  if(this.readyState== 4 && this.status==200){
+                //    console.log(this.responseText);
+                  document.getElementById("container").innerHTML=this.responseText
+                 }
+                 request.send();
+            };
+            
+        
+    </script>
+</head>
+<body>
+    <h1>Welcome to home page</h1>
+    <h2><a href="about.html">About Page</a></h2>
+
+    <button onclick="loadAboutInformation()">Load about</button>
+    <div id ="container"></div>
+
+    <button id = "jbtn">JQuery Load</button>\
+    
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"
+></script> -->
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+#progress_bar{
+    width: 50%;
+    background-color: rgb(48, 199, 199);
+}
+
+#myprogressbar{
+    width: 1%;
+    height: 35px;
+    background-color: rgb(166, 96, 11);
+    text-align: center;
+    color: black;
+}
